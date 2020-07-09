@@ -37,6 +37,19 @@ namespace ConstructionLine.CodingChallenge.Tests
         }
 
         [Test]
+        public void SearchEngine_FindsSmallAndMedium_WithRedAndBlue()
+        {
+            RunTest(
+                new SearchOptions
+                {
+                    Colours = new List<Colour> { Colour.Red, Colour.Blue },
+                    Sizes = new List<Size> { Size.Small, Size.Medium }
+                },
+                4
+            );
+        }
+
+        [Test]
         public void SearchEngine_FindsSmall_WithRed()
         {
             RunTest(
