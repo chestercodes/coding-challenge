@@ -6,6 +6,6 @@ namespace ConstructionLine.CodingChallenge
     {
         public List<Size> Sizes { get; set; } = new List<Size>();
 
-        public List<Color> Colors { get; set; } = new List<Color>();
+        public List<Colour> Colours { get; set; } = new List<Colour>();
     }
 }

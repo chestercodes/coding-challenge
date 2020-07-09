@@ -14,14 +14,13 @@ namespace ConstructionLine.CodingChallenge.Tests.SampleData
         public SampleDataBuilder(int numberOfShirts)
         {
             _numberOfShirts = numberOfShirts;
-
         }
 
 
         public List<Shirt> CreateShirts()
         {
             return Enumerable.Range(0, _numberOfShirts)
-                .Select(i => new Shirt(Guid.NewGuid(), $"Shirt {i}", GetRandomSize(), GetRandomColor()))
+                .Select(i => new Shirt(Guid.NewGuid(), $"Shirt {i}", GetRandomSize(), GetRandomColour()))
                 .ToList();
         }
 
@@ -29,15 +28,15 @@ namespace ConstructionLine.CodingChallenge.Tests.SampleData
         private Size GetRandomSize()
         {
             
-            var sizes = Size.All;
+            var sizes = All.Sizes;
             var index = _random.Next(0, sizes.Count);
             return sizes.ElementAt(index);
         }
 
 
-        private Color GetRandomColor()
+        private Colour GetRandomColour()
         {
-            var colors = Color.All;
+            var colors = All.Colours;
             var index = _random.Next(0, colors.Count);
             return colors.ElementAt(index);
         }

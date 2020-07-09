@@ -4,28 +4,40 @@ namespace ConstructionLine.CodingChallenge
 {
     public class SearchResults
     {
-        public List<Shirt> Shirts { get; set; }
+        public List<Shirt> Shirts { get; set; } = new List<Shirt>();
 
 
-        public List<SizeCount> SizeCounts { get; set; }
+        public List<SizeCount> SizeCounts { get; set; } = new List<SizeCount>();
 
 
-        public List<ColorCount> ColorCounts { get; set; }
+        public List<ColourCount> ColourCounts { get; set; } = new List<ColourCount>();
     }
 
 
     public class SizeCount
     {
-        public Size Size { get; set; }
+        public SizeCount(Size size, int count)
+        {
+            Size = size;
+            Count = count;
+        }
 
-        public int Count { get; set; }
+        public Size Size { get; }
+
+        public int Count { get; }
     }
 
 
-    public class ColorCount
+    public class ColourCount
     {
-        public Color Color { get; set; }
+        public ColourCount(Colour colour, int count)
+        {
+            Colour = colour;
+            Count = count;
+        }
 
-        public int Count { get; set; }
+        public Colour Colour { get; }
+
+        public int Count { get; }
     }
 }

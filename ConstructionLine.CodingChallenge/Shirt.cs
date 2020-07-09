@@ -8,16 +8,16 @@ namespace ConstructionLine.CodingChallenge
 
         public string Name { get; }
 
-        public Size Size { get; set; }
+        public Size Size { get; }
 
-        public Color Color { get; set; }
+        public Colour Colour { get; }
 
-        public Shirt(Guid id, string name, Size size, Color color)
+        public Shirt(Guid id, string name, Size size, Colour colour)
         {
             Id = id;
             Name = name;
             Size = size;
-            Color = color;
+            Colour = colour;
         }
     }
 }

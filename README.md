@@ -1,3 +1,21 @@
+# Chester's test
+
+Some changes I have made:
+
+- Changed classes Size and Color to `enums`
+- Implemented search engine code
+- Removed assertions from performance test (runs in ~50ms on my machine)
+- Fixed assertions and added some basic tests. Removed inheritance in test classes.
+- Various code tidy-ups. Convert to immutable classes etc.
+
+
+
+
+
+
+
+
+
 # Construction Line code challenge
 
 The code challenge consists in the implementation of a simple search engine for shirts.
